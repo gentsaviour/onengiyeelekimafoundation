@@ -1,0 +1,131 @@
+body {
+  background: 
+    linear-gradient(180deg, #3a277cdd 0%, #000a 100%),
+    url('/pages/stylish/images/background.jpg') center/cover no-repeat;
+  color: #fff;
+  font-family: 'Montserrat', Arial, sans-serif;
+  background-blend-mode: overlay;
+}
+
+.hero {
+  background: url('https://images.unsplash.com/photo-1473649085228-583485e6e4d7?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
+  min-height: 600px;
+  position: relative;
+}
+
+.hero .overlay {
+  background: linear-gradient(180deg, #39277c7c 0%, #000a 100%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+.hero .content {
+  z-index: 2;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.hero .desc {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+}
+
+.vision-mission > div {
+  background: rgba(255, 255, 255, 0.13);
+  border-radius: 10px;
+  backdrop-filter: blur(1px);
+}
+
+.hero-img {
+  z-index: 2;
+  width: 300px;
+}
+
+/* Responsive tweaks (Bootstrap handles most) */
+@media (max-width: 991px) {
+  .hero-img {
+    display: none !important;
+  }
+}
+
+.modal-backdrop.show {
+  opacity: 0.63;
+  background: #2a2062;
+}
+
+.nav-item a {
+  color: white;
+  font-size: 18;
+}
+
+.nav-item :hover {
+  color: white;
+  font-size: 18;
+  text-decoration: underline;
+  padding: 2px 2px;
+  border-radius: 12px;
+}
+
+/* Fix navbar background for mobile */
+@media (max-width: 768px) {
+  .navbar {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    position: relative !important;
+  }
+}
+
+.ms-3{
+  color: #fff;
+}
+
+/* Description section styles */
+.description {
+  font-size: 1.1em;
+  line-height: 1.8;
+  text-align: justify;
+  color: black;
+  background: white;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.description .desc {
+  padding: 0 15px;
+}
+
+/* Countdown section styles */
+.countdown {
+  background-color: #f9f9f9;
+}
+
+.countdown h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #f04e23; /* Customize color */
+  margin-bottom: 10px;
+}
+
+.countdown h5 {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .countdown {
+    padding: 10px;
+  }
+}
+
+.campaign{
+  justify-content: center;
+}
