@@ -125,7 +125,6 @@
         Humanitarian Services
         We provide targeted support for vulnerable populations, including medical outreach, food distribution, educational scholarships, and disaster relief.
         Contact Us We welcome inquiries, partnerships, and collaborations from individuals, organizations, and institutions who share our vision of empowerment, peace, and unity.
-            
         </p>
       </div>
       <div class="col-md-6">
@@ -146,9 +145,10 @@
           <div class="service-icon mb-3 text-primary fs-2">
             <i class="bi bi-people-fill"></i>
           </div>
-          <h5 class="fw-bold mb-2">Donate to Charity</h5>
-          <p class="mb-3 small text-dark">We need your donation to reach millions of underprivileged people who need your support to survive.</p>
-          <button class="btn btn-primary btn-sm mt-auto px-4" onclick="handleApplyNow()">Donate now</button>
+          <h5 class="fw-bold mb-2"  style="color: black;">Donate to Charity</h5>
+          <p class="mb-3 small text-dark">Your donation can help us reach and uplift millions of underprivileged individuals who depend on your generosity for hope, dignity, and survival.
+            Or a shorter version for emphasis:
+        With your support, we can reach millions in need, bringing relief, hope, and a chance to thrive.</p>
         </div>
       </div>
 
@@ -157,9 +157,8 @@
           <div class="service-icon mb-3 text-success fs-2">
             <i class="bi bi-person-bounding-box"></i>
           </div>
-          <h5 class="fw-bold mb-2">Volunteer with Us</h5>
-          <p class="mb-3 small text-dark">Volunteer in fundraising, article writing, grant writing, and more. Make impact with your time and skills.</p>
-          <button class="btn btn-success btn-sm mt-auto px-4" onclick="handleApplyNow()">Volunteer now</button>
+          <h5 class="fw-bold mb-2" style="color: black;">Volunteer with Us</h5>
+          <p class="mb-3 small text-dark">Lend your skills, whether in fundraising, writing, or organizing, to help us grow and reach more lives. Your time can truly make a difference.</p>
         </div>
       </div>
 
@@ -168,9 +167,8 @@
           <div class="service-icon mb-3 text-warning fs-2">
             <i class="bi bi-building"></i>
           </div>
-          <h5 class="fw-bold mb-2">Give Scholarship</h5>
+          <h5 class="fw-bold mb-2"  style="color: black;">Give Scholarship</h5>
           <p class="mb-3 small text-dark">Sponsor youth and women in higher education. Education is the gateway to empowerment.</p>
-          <button class="btn btn-warning btn-sm mt-auto px-4 text-white" onclick="handleApplyNow()">Apply now</button>
         </div>
       </div>
     </div>
@@ -180,7 +178,7 @@
 <section>
   <div class="campaign py-5 bg-light">
     <div class="container">
-      <div class="row justify-content-center">
+      <div class="row justify-content-center" style="color: black;">
         <div class="col-lg-10 col-xl-8">
           <p class="fs-5 text-dark text-justify">
             We are always looking for ways to help disadvantaged communities and poor families in times of need.
@@ -189,7 +187,15 @@
             It’s important for us to stand by people in need. Make a donation to support our cause today!
             You’ll receive a tax-deductible receipt when you donate to our cause via GlobalGiving.
           </p>
-          <button class="btn btn-warning btn-sm mt-3 px-4 text-white" onclick="handleApplyNow()">Donante now</button>
+        </div>
+        <div class="account-details">
+          <p class="lead mb-4" id="account-info" style="max-width: 700px; margin: 0 auto;">
+            <strong>Account Name:</strong> ONENGIYE ELEKIMA FOUNDATION<br>
+            <strong>Naira Account Number:</strong> 409200861 <br>
+            <strong>USD Account Number:</strong> 4091962499 <br>
+            <strong>Bank:</strong> Polaris bank
+          </p>
+          <button class="btn btn-warning btn-lg" id="copy-btn" onclick="handleCopyAccount()">Copy Now</button>
         </div>
       </div>
     </div>
@@ -250,6 +256,27 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 </script>
-
+<script>
+function handleCopyAccount() {
+  // Get the account details text (plain text, not HTML)
+  const accountInfoEl = document.getElementById('account-info');
+  // Replace <br> tags with newlines for better formatting
+  let text = accountInfoEl.innerHTML.replace(/<br\s*\/?>/gi, '\n');
+  // Remove any remaining HTML tags
+  text = text.replace(/<[^>]+>/g, '');
+  
+  // Use Clipboard API
+  navigator.clipboard.writeText(text).then(function() {
+    // Optional: show feedback
+    const copyBtn = document.getElementById('copy-btn');
+    copyBtn.innerText = "Copied!";
+    setTimeout(() => {
+      copyBtn.innerText = "Copy Now";
+    }, 2000);
+  }, function() {
+    alert('Failed to copy');
+  });
+}
+</script>
 </body>
 </html>

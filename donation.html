@@ -167,14 +167,15 @@
       You can send funds to our bank account directly using the following bank account details:
     </p>
     <h2 class="fw-bold details">Bank Account Details</h2>
-    <div class="account-details">
-      <p class="lead mb-4" style="max-width: 700px; margin: 0 auto;">
-        <strong>Account Name:</strong> ONENGIYE ELEKIMA FOUNDATION<br>
-        <strong>Account Number:</strong> 306 000 0000<br>
-        <strong>Bank:</strong> First Bank of Nigeria Plc
-      </p>
-      <button class="btn btn-warning btn-lg" onclick="handleApplyNow()">Copy Now</button>
-    </div>
+   <div class="account-details">
+          <p class="lead mb-4" id="account-info" style="max-width: 700px; margin: 0 auto;">
+            <strong>Account Name:</strong> ONENGIYE ELEKIMA FOUNDATION<br>
+            <strong>Naira Account Number:</strong> 409200861 <br>
+            <strong>USD Account Number:</strong> 4091962499 <br>
+            <strong>Bank:</strong> Polaris bank
+          </p>
+          <button class="btn btn-warning btn-lg" id="copy-btn" onclick="handleCopyAccount()">Copy Now</button>
+        </div>
   </div>
 </section>
 <!-- Impact Numbers -->
@@ -318,17 +319,7 @@
             <p><strong>Account Number:</strong> 0491180181.</p>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="p-4 bg-white rounded shadow">
-            <i class="bi bi-gift-fill fs-1 text-primary mb-3"></i>
-            <h5 class="fw-bold">How to donate to our domiciliary Bank Account Details</h5>
-            <p><strong>DOLLAR// ACCOUNT  :</strong> 355543455.</p>
-            <p><strong>EURO// ACCOUNT  :</strong> 355543456.</p>
-            <p><strong>POUND// ACCOUNT  :</strong> 355543457.</p>
-            <p><strong>SWIFT CODE:</strong> GTBINGLA.</p>
-            <p>BRANCH // PORT HARCOURT</p>
-          </div>
-        </div>
+  
         <div class="col-md-4">
           <div class="p-4 bg-white rounded shadow">
             <i class="bi bi-megaphone-fill fs-1 text-success mb-3"></i>
@@ -393,6 +384,28 @@
   function handleApplyNow() {
     window.location.href = '/donate.html'; // Adjust if you have a dedicated donation form
   }
+</script>
+<script>
+function handleCopyAccount() {
+  // Get the account details text (plain text, not HTML)
+  const accountInfoEl = document.getElementById('account-info');
+  // Replace <br> tags with newlines for better formatting
+  let text = accountInfoEl.innerHTML.replace(/<br\s*\/?>/gi, '\n');
+  // Remove any remaining HTML tags
+  text = text.replace(/<[^>]+>/g, '');
+  
+  // Use Clipboard API
+  navigator.clipboard.writeText(text).then(function() {
+    // Optional: show feedback
+    const copyBtn = document.getElementById('copy-btn');
+    copyBtn.innerText = "Copied!";
+    setTimeout(() => {
+      copyBtn.innerText = "Copy Now";
+    }, 2000);
+  }, function() {
+    alert('Failed to copy');
+  });
+}
 </script>
 </body>
 </html>
