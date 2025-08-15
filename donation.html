@@ -8,245 +8,106 @@
   <link rel="stylesheet" href="stylish/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <style>
-    /* Global Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Body Styles */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  background-color: #f8f9fa;
-  color: #333;
-}
-.lead{
-    color: #ffffff;
-}
-/* Hero Section */
-.hero {
-  position: relative;
-  padding: 100px 20px;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  font-weight: 700;
-}
-
-.hero p {
-  font-size: 1.25rem;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.hero .btn {
-  font-size: 1.1rem;
-  font-weight: 600;
-  border-radius: 30px;
-}
-
-/* Overlay inside hero section */
-.hero .overlay {
-  background: rgba(0, 0, 0, 0.6);
-}
-
-/* Donation Impact Counters */
-.counter {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #0d6efd;
-}
-
-.bg-light h6 {
-  font-size: 1rem;
-  margin-top: 10px;
-  color: #ffffff;
-}
-
-/* Donation Appeal Section */
-section {
-  padding: 60px 0;
-}
-
-section h3,
-section h2 {
-  color: #0d6efd;
-}
-
-section p {
-  font-size: 1rem;
-  color: #444;
-}
-
-section ul {
-  padding-left: 0;
-}
-
-section li {
-  font-size: 0.95rem;
-  margin-bottom: 8px;
-}
-
-/* Cards in Ways to Help */
-.bg-white.rounded.shadow {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.bg-white.rounded.shadow:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
-}
-
-.bi {
-  display: block;
-}
-
-/* Footer Styles */
-footer {
-  background-color: #212529;
-  color: #ffffff;
-}
-
-footer h4 {
-  font-weight: bold;
-  color: #ffc107;
-}
-
-footer ul li {
-  margin-bottom: 6px;
-  font-size: 0.9rem;
-}
-
-footer hr {
-  width: 80px;
-  margin-bottom: 20px;
-  border-top: 4px solid #fff;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.25rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .counter {
-    font-size: 2rem;
-  }
-}
-.hero {
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  color: white;
-  padding: 2rem;
-}
-
-.hero .overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 1;
-}
-
-.hero .container {
-  position: relative;
-  z-index: 2;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.hero p.lead {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  max-width: 700px;
-  margin: 0 auto 1.5rem auto;
-}
-
-.hero h2 {
-  font-size: 1.5rem;
-  margin-top: 1.5rem;
-  font-weight: 600;
-}
-
-.hero p {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-.hero button.btn {
-  font-size: 1.1rem;
-  padding: 0.75rem 2rem;
-  border-radius: 50px;
-  background-color: #f0ad4e;
-  border: none;
-  transition: background 0.3s ease;
-}
-
-.hero button.btn:hover {
-  background-color: #ec971f;
-}
-.account-details{
-  color: white;
-}
-.account-details p{
-  color: white;
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-  font-weight: 500;
-  text-align: left;
-}
-.details{
-  color: #f0ad4e;
-  font-weight: 600;
-  margin-top: 1.5rem;
-  font-size: 1.5rem;
-}
-.given {
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+    .lead { color: #ffffff; }
+    .hero {
+      position: relative;
+      background: url('https://images.unsplash.com/photo-1571417814270-5cfb10916e02?q=80&w=1080') center/cover no-repeat;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      color: white;
+      padding: 2rem;
+    }
+    .hero .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+    .hero .container {
+      position: relative;
+      z-index: 2;
+    }
+    .hero h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; }
+    .hero p.lead {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      max-width: 700px;
+      margin: 0 auto 1.5rem auto;
+    }
+    .hero h2 { font-size: 1.5rem; margin-top: 1.5rem; font-weight: 600; }
+    .hero p { font-size: 1rem; margin-bottom: 0.5rem; }
+    .hero button.btn {
+      font-size: 1.1rem;
+      padding: 0.75rem 2rem;
+      border-radius: 50px;
+      background-color: #f0ad4e;
+      border: none;
+      transition: background 0.3s ease;
+    }
+    .hero button.btn:hover { background-color: #ec971f; }
+    .account-details { color: white; }
+    .account-details p {
+      color: white;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+      text-align: left;
+    }
+    .details {
+      color: #f0ad4e;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      font-size: 1.5rem;
+    }
+    .counter { font-size: 2.5rem; font-weight: bold; color: #0d6efd; }
+    .bg-light h6 { font-size: 1rem; margin-top: 10px; color: #ffffff; }
+    section { padding: 60px 0; }
+    section h3, section h2 { color: #0d6efd; }
+    section p { font-size: 1rem; color: #444; }
+    section ul { padding-left: 0; }
+    section li { font-size: 0.95rem; margin-bottom: 8px; }
+    .bg-white.rounded.shadow { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .bg-white.rounded.shadow:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    }
+    .bi { display: block; }
+    footer { background-color: #212529; color: #ffffff; }
+    footer h4 { font-weight: bold; color: #ffc107; }
+    footer ul li { margin-bottom: 6px; font-size: 0.9rem; }
+    footer hr { width: 80px; margin-bottom: 20px; border-top: 4px solid #fff; }
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.25rem; }
+      .hero p { font-size: 1rem; }
+      .counter { font-size: 2rem; }
+      .given h2 { font-size: 1.5rem; }
+      .given p { font-size: 1rem; }
+      .donation-card { text-align: center; }
+      .donation-card .col-md-6 { margin-bottom: 1.5rem; }
+    }
+    .given {
       padding: 4rem 1rem;
       background-color: #f8f9fa;
       color: #333;
     }
-
-    .given h2 {
-      font-size: 2rem;
-      color: #d97706; /* warm highlight */
-    }
-
+    .given h2 { font-size: 2rem; color: #d97706; }
     .given p {
       max-width: 900px;
       margin: 0 auto;
       font-size: 1.1rem;
       line-height: 1.7;
       text-align: justify;
-    }
-
-    @media (max-width: 768px) {
-      .given h2 {
-        font-size: 1.5rem;
-      }
-
-      .given p {
-        font-size: 1rem;
-      }
     }
     .donation-card {
       background-color: #fff;
@@ -255,91 +116,67 @@ footer hr {
       padding: 2rem;
       margin: 2rem 0;
     }
+    .donation-card img { border-radius: 1rem; }
+    .donation-card p { font-size: 1.1rem; line-height: 1.7; color: #333; }
+    @media (max-width: 991.98px) {
+  .navbar-collapse.show {
+    background-color: rgba(0, 0, 0, 0.9); /* Or any desired color */
+    padding: 1rem;
+    border-radius: 10px;
+  }
 
-    .donation-card img {
-      border-radius: 1rem;
-    }
+  .navbar-nav .nav-link {
+    color: white !important;
+  }
+}
 
-    .donation-card p {
-      font-size: 1.1rem;
-      line-height: 1.7;
-      color: #333;
-    }
-
-    @media (max-width: 768px) {
-      .donation-card {
-        text-align: center;
-      }
-
-      .donation-card .col-md-6 {
-        margin-bottom: 1.5rem;
-      }
-    }
   </style>
 </head>
 <body>
-
 <!-- Navbar -->
- <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent position-absolute w-100 px-lg-5 px-2" style="z-index:3;">
-      <div class="container-fluid">
-        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-          <img src="WhatsApp Image 2025-07-24 at 19.33.32_3f84590e.jpg" alt="" style="width:100px; height:100px;">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="mainNav">
-          <ul class="navbar-nav mb-2 mb-lg-0 gap-lg-5">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="social.html">Social Events, </a>
-            </li>
-            
-            <li class="nav-item">
-              <a class="nav-link" href="sports.html">Sports </a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="Humanitarians.html">Humanitarians</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="news.html">News</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="donation.html">Donations</a>
-            </li>
-          </ul>
-        </div>
+<header style=>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent position-absolute w-100 px-lg-5 px-2" style="z-index:3;">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="WhatsApp Image 2025-07-24 at 19.33.32_3f84590e.jpg" alt="" style="width:100px; height:100px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+        <ul class="navbar-nav mb-2 mb-lg-0 gap-lg-5">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="social.html">Social Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="sports.html">Sports</a></li>
+          <li class="nav-item"><a class="nav-link" href="humanitarians.html">Humanitarians</a></li>
+          <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+          <li class="nav-item"><a class="nav-link" href="donation.html">Donations</a></li>
+        </ul>
       </div>
-    </nav>
-  </header>
-
+    </div>
+  </nav>
+</header>
 <!-- Hero -->
-<section class="hero d-flex justify-content-center align-items-center flex-column min-vh-100 text-white text-center" style="background: url('https://images.unsplash.com/photo-1571417814270-5cfb10916e02?q=80&w=1080') center/cover no-repeat;">
-  <div class="overlay position-absolute w-100 h-100" style="background: rgba(0,0,0,0.6); z-index:1;"></div>
+<section class="hero d-flex justify-content-center align-items-center flex-column min-vh-100 text-white text-center">
+  <div class="overlay position-absolute w-100 h-100"></div>
   <div class="container position-relative z-2">
-    <h1 class="fw-bold">Your Support Changes Lives</h1>
+    <h1 class="fw-bold" style="margin-top: 100px;">Your Support Changes Lives</h1>
     <p class="lead mb-4" style="max-width: 700px; margin: 0 auto;">
-    Get tax-exempt when you donate to our cause on GlobalGiving. Support our mission through GlobalGiving platform. Make charitable donations to sponsor children’s education, school feeding, classroom building, sanitary facility projects, and poverty relief programs for children, women, and male counterparts. 
-
-    You can send funds to our bank account directly using the following bank account details: 
-</p>
-<br>
-    <h2 class="fw-bold details">Bank Account Details</h2>
-<div class="account-details">
-    <p class="lead mb-4" style="max-width: 700px; margin: 0 auto;">
-      <strong>Account Name:</strong> ONENGIYE ELEKIMA FOUNDATION<br>
-      <strong>Account Number:</strong> 306 000 0000<br>
-      <strong>Bank:</strong> First Bank of Nigeria Plc
+      Get tax-exempt when you donate to our cause on GlobalGiving. Support our mission through GlobalGiving platform. Make charitable donations to sponsor children’s education, school feeding, classroom building, sanitary facility projects, and poverty relief programs for children, women, and male counterparts.
+      <br><br>
+      You can send funds to our bank account directly using the following bank account details:
     </p>
-    <button class="btn btn-warning btn-lg" onclick="handleApplyNow()">Copy Now</button>
-</div>
+    <h2 class="fw-bold details">Bank Account Details</h2>
+    <div class="account-details">
+      <p class="lead mb-4" style="max-width: 700px; margin: 0 auto;">
+        <strong>Account Name:</strong> ONENGIYE ELEKIMA FOUNDATION<br>
+        <strong>Account Number:</strong> 306 000 0000<br>
+        <strong>Bank:</strong> First Bank of Nigeria Plc
+      </p>
+      <button class="btn btn-warning btn-lg" onclick="handleApplyNow()">Copy Now</button>
+    </div>
   </div>
 </section>
-
 <!-- Impact Numbers -->
 <section class="py-5 bg-light text-center">
   <div class="container">
@@ -351,7 +188,6 @@ footer hr {
     </div>
   </div>
 </section>
-
 <!-- Donation Appeal -->
 <section class="py-5">
   <div class="container">
@@ -374,7 +210,6 @@ footer hr {
     </div>
   </div>
 </section>
-
 <!-- Ways to Help -->
 <section class="py-5 bg-light text-center">
   <div class="container">
@@ -405,135 +240,136 @@ footer hr {
   </div>
 </section>
 <div class="given text-center">
-    <h2 class="fw-bold mb-4">Give — Underprivileged Nigerians Need You More Than Ever</h2>
-    <p>
-      Give to the needy today. The COVID-19 pandemic has hit us harder than ever, and low-income families suffer the most. Families struggling to feed cannot provide essential services to their children. Your gift today can help change lives and communities.
-      <br><br>
-      Without the generous donations we've received since December 2020 from individuals and corporate donors, our ongoing “Back to School” campaign wouldn’t be possible. These funds have supported over 732 unfortunate children with school supplies, provided scholarships to orphaned girls in secondary school, and allowed us to construct toilet blocks to combat open defecation.
-      <br><br>
-      On January 11th, 2022, we began a free nursery and primary school with the aim of offering free education to orphans and less-privileged pupils.
-      <br><br>
-      We encourage you to continue supporting our initiatives so we can reach more rural communities. No amount is too small to help.
-      <br><br>
-      Helpers Social Development Foundation is a non-profit organization focused on defeating poverty in African countries through education, health, and economic empowerment. Education is a crucial investment in human capital and essential to achieving the SDG 4 goals. Unfortunately, poverty continues to deny access to proper education—especially for women and girls.
-      <br><br>
-      Cryptocurrency donations offer a modern, borderless way to support African education and infrastructure. 100% of your crypto donations go directly to our charitable projects.
-      <br><br>
-      Thanks to our crypto donors, we launched a free nursery and primary school in Oji-River, providing supplies and scholarships to over 1,508 underprivileged children. We've also built toilet blocks and hosted health outreaches.
-      <br><br>
-      Helpers Social Foundation is among the top charities accepting Bitcoin donations. Your support keeps our mission alive.
-    </p>
-  </div>
-</section>
+  <h2 class="fw-bold mb-4">Give — Underprivileged Nigerians Need You More Than Ever</h2>
+  <p>
+    Give to the needy today. The COVID-19 pandemic has hit us harder than ever, and low-income families suffer the most. Families struggling to feed cannot provide essential services to their children. Your gift today can help change lives and communities.
+    <br><br>
+    Without the generous donations we've received since December 2020 from individuals and corporate donors, our ongoing “Back to School” campaign wouldn’t be possible. These funds have supported over 732 unfortunate children with school supplies, provided scholarships to orphaned girls in secondary school, and allowed us to construct toilet blocks to combat open defecation.
+    <br><br>
+    On January 11th, 2022, we began a free nursery and primary school with the aim of offering free education to orphans and less-privileged pupils.
+    <br><br>
+    We encourage you to continue supporting our initiatives so we can reach more rural communities. No amount is too small to help.
+    <br><br>
+    Helpers Social Development Foundation is a non-profit organization focused on defeating poverty in African countries through education, health, and economic empowerment. Education is a crucial investment in human capital and essential to achieving the SDG 4 goals. Unfortunately, poverty continues to deny access to proper education—especially for women and girls.
+    <br><br>
+    Cryptocurrency donations offer a modern, borderless way to support African education and infrastructure. 100% of your crypto donations go directly to our charitable projects.
+    <br><br>
+    Thanks to our crypto donors, we launched a free nursery and primary school in Oji-River, providing supplies and scholarships to over 1,508 underprivileged children. We've also built toilet blocks and hosted health outreaches.
+    <br><br>
+    Helpers Social Foundation is among the top charities accepting Bitcoin donations. Your support keeps our mission alive.
+  </p>
+</div>
 <section>
- <div class="container">
-  <div class="donation-card">
-    <div class="row align-items-center">
-      <div class="col-md-6 mb-4 mb-md-0">
-        <img src="/WhatsApp Image 2025-07-24 at 19.33.32_3f84590e.jpg" alt="Donation" class="img-fluid shadow">
-      </div>
-      <div class="col-md-6">
-        <p>
-          <strong>100% of your donations</strong> to Helpers Foundation go directly to charity work. With your help, we can enroll more kids back in school. Will you help us?
-          <br><br>
-          Helpers Social Development Foundation is dedicated to supporting underprivileged children, youth, and women through education and economic empowerment. We believe that educating all children is crucial for reducing poverty and increasing individual well-being.
-          <br><br>
-          <strong>Consider donating today</strong> — your support can change lives in these desperate times.
-        </p>
+  <div class="container">
+    <div class="donation-card">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="/WhatsApp Image 2025-07-24 at 19.33.32_3f84590e.jpg" alt="Donation" class="img-fluid shadow">
+        </div>
+        <div class="col-md-6">
+          <p>
+            <strong>100% of your donations</strong> to Helpers Foundation go directly to charity work. With your help, we can enroll more kids back in school. Will you help us?
+            <br><br>
+            Helpers Social Development Foundation is dedicated to supporting underprivileged children, youth, and women through education and economic empowerment. We believe that educating all children is crucial for reducing poverty and increasing individual well-being.
+            <br><br>
+            <strong>Consider donating today</strong> — your support can change lives in these desperate times.
+          </p>
+        </div>
       </div>
     </div>
   </div>
-</div>
 </section>
 <section class="why">
-<div class="whygiven">
-  <div class="container">
+  <div class="whygiven">
+    <div class="container">
       <h2 class="fw-bold mb-4">Why Give?</h2>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="p-4 bg-white rounded shadow">
-          <i class="bi bi-gift-fill fs-1 text-primary mb-3"></i>
-          <h5 class="fw-bold">Other Ways To Give To Helpers Foundation</h5>
-          <p>Helpers Social Development Foundation accept donations on GlobalGiving. Get tax-exempt donations receipt when you donate to our cause.</p>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="p-4 bg-white rounded shadow">
+            <i class="bi bi-gift-fill fs-1 text-primary mb-3"></i>
+            <h5 class="fw-bold">Other Ways To Give To Helpers Foundation</h5>
+            <p>Helpers Social Development Foundation accept donations on GlobalGiving. Get tax-exempt donations receipt when you donate to our cause.</p>
+          </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="p-4 bg-white rounded shadow">
-          <i class="bi bi-heart-fill fs-1 text-danger mb-3"></i>
-          <h5 class="fw-bold">Monthly Giving</h5>
-          <p>Your monthly donation will enable Helpers Foundation to take up a planned long-term approach. As our donor, you are working side-by-side with us to help change underprivileged lives in Nigeria.</p>
+        <div class="col-md-4">
+          <div class="p-4 bg-white rounded shadow">
+            <i class="bi bi-heart-fill fs-1 text-danger mb-3"></i>
+            <h5 class="fw-bold">Monthly Giving</h5>
+            <p>Your monthly donation will enable Helpers Foundation to take up a planned long-term approach. As our donor, you are working side-by-side with us to help change underprivileged lives in Nigeria.</p>
+          </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="p-4 bg-white rounded shadow">
-          <i class="bi bi-megaphone-fill fs-1 text-success mb-3"></i>
-          <h5 class="fw-bold">IS MY DONATION TAX-DEDUCTIBLE AND HOW CAN I GET A TAX RECEIPT AFTER DONATING?</h5>
-          <p>Yes, your donation to Helpers Social Development Foundation is tax-deductible. Your donation receipt will be sent to your email within 24 hours after confirming your donation.</p>
+        <div class="col-md-4">
+          <div class="p-4 bg-white rounded shadow">
+            <i class="bi bi-megaphone-fill fs-1 text-success mb-3"></i>
+            <h5 class="fw-bold">IS MY DONATION TAX-DEDUCTIBLE AND HOW CAN I GET A TAX RECEIPT AFTER DONATING?</h5>
+            <p>Yes, your donation to Helpers Social Development Foundation is tax-deductible. Your donation receipt will be sent to your email within 24 hours after confirming your donation.</p>
+          </div>
         </div>
-      </div>
-</div>
-  </div>
-  <div class="container">
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="p-4 bg-white rounded shadow">
-          <i class="bi bi-gift-fill fs-1 text-primary mb-3"></i>
-          <h5 class="fw-bold">How to donate to Helpers Social Development Foundation manually?</h5>
-          <p><strong>Bank Name:</strong> Guaranty Trust Bank.</p>
-          <p><strong>Account Name:</strong> Donations to Poor.</p>
-          <p><strong>Account Number:</strong> 0491180181.</p>
-        </div>
-      </div>
-       <div class="col-md-4">
-        <div class="p-4 bg-white rounded shadow">
-          <i class="bi bi-gift-fill fs-1 text-primary mb-3"></i>
-          <h5 class="fw-bold">How to donate to our domiciliary Bank Account Details</h5>
-          <p><strong>DOLLAR// ACCOUNT  :</strong> 355543455.</p>
-          <p><strong>EURO// ACCOUNT  :</strong> 355543456.</p>
-          <p><strong>POUND// ACCOUNT  :</strong> 355543457.</p>
-          <p><strong>SWIFT CODE:</strong> GTBINGLA.</p>
-          <p>BRANCH // PORT HARCOURT</p>
-          
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="p-4 bg-white rounded shadow">
-          <i class="bi bi-megaphone-fill fs-1 text-success mb-3"></i>
-          <h5 class="fw-bold">How to donate to our domiciliary Bank Account Details</h5>
-          <p>Helpers Social Development Foundation accepts Cryptocurrency donations to educate and empower less privileged children, youths and women in Nigeria.</p>
-        </div>
-      </div>
-</div>
-  </div>
-</div>
-</section>
-<!-- Footer -->
-<footer class="bg-dark text-white pt-5 pb-3">
-  <hr style="border-bottom: 10px solid white;">
-  <div class="container">
-    <div class="row text-center text-lg-start">
-      <div class="col-lg-6 mb-4">
-        <h4 class="text-info">CONTACT US</h4>
-        <ul class="list-unstyled small">
-          <li>+234 (0)906 995 1352 | +234 (0)908 337 2240</li>
-          <li>info@softgapng.com | support@softgapng.com</li>
-          <li>#Suit 7 No.4 Dawuta Street, Off Odili Rd, PH</li>
-        </ul>
-      </div>
-      <div class="col-lg-6">
-        <h4 class="text-info">STAY CONNECTED</h4>
-        <ul class="list-unstyled small">
-          <li>Join our mailing list</li>
-          <li>Follow us on social media</li>
-          <li>Share our mission</li>
-        </ul>
       </div>
     </div>
-    <div class="text-center bg-primary bg-opacity-75 py-3 mt-4">© 2025 ONENGIYE ELEKIMA FOUNDATION. All rights reserved.</div>
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="p-4 bg-white rounded shadow">
+            <i class="bi bi-gift-fill fs-1 text-primary mb-3"></i>
+            <h5 class="fw-bold">How to donate to Helpers Social Development Foundation manually?</h5>
+            <p><strong>Bank Name:</strong> Guaranty Trust Bank.</p>
+            <p><strong>Account Name:</strong> Donations to Poor.</p>
+            <p><strong>Account Number:</strong> 0491180181.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 bg-white rounded shadow">
+            <i class="bi bi-gift-fill fs-1 text-primary mb-3"></i>
+            <h5 class="fw-bold">How to donate to our domiciliary Bank Account Details</h5>
+            <p><strong>DOLLAR// ACCOUNT  :</strong> 355543455.</p>
+            <p><strong>EURO// ACCOUNT  :</strong> 355543456.</p>
+            <p><strong>POUND// ACCOUNT  :</strong> 355543457.</p>
+            <p><strong>SWIFT CODE:</strong> GTBINGLA.</p>
+            <p>BRANCH // PORT HARCOURT</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 bg-white rounded shadow">
+            <i class="bi bi-megaphone-fill fs-1 text-success mb-3"></i>
+            <h5 class="fw-bold">How to donate to our domiciliary Bank Account Details</h5>
+            <p>Helpers Social Development Foundation accepts Cryptocurrency donations to educate and empower less privileged children, youths and women in Nigeria.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</footer>
+</section>
+<!-- Footer -->
+  <footer class="bg-dark text-white pt-5 pb-0">
+  <hr style="border-bottom: 10px solid white;">
+    <div class="container">
+      <div class="row footer-section text-center text-lg-start">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <h4 class="text-info">OUR SERVICES</h4>
+          <ul class="list-unstyled">
+            <li>People Impacted</li>
+            <li> Partners </li>
+            <li>Volunteers</li>
+            <li>Lives Saved</li>
+          </ul>
+        </div>
+        <div class="col-lg-6">
+          <h4 class="text-info">CONTACT US</h4>
+          <ul class="list-unstyled">
+            <li>+2349083372240, +2349069951352</li>
+            <li>info@onengiyeelekimafoundation.org</li>
+            <li>www.onengiyefoundation.org</li>
+            <li>#4 Dawuta Street, Odili Road, Port Harcourt, Rivers State.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom text-center py-3 mt-4 bg-primary bg-opacity-75">
+      © 2025 Onengiye Elekima Foundation All rights reserved.
+      </div>
+    </div>
+  </footer>
 
-<!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
   document.addEventListener("DOMContentLoaded", () => {
@@ -554,11 +390,9 @@ footer hr {
       updateCount();
     });
   });
-
   function handleApplyNow() {
     window.location.href = '/donate.html'; // Adjust if you have a dedicated donation form
   }
 </script>
-
 </body>
 </html>
